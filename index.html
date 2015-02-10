@@ -15,18 +15,19 @@ float: right;
 color: #f90000 !important;
 font-size: 12px;
 vertical-align: top;
-
 }
+
 div.body {
 background-color:white;
-
+display: block;
 }
+
 div.header {
 padding: 4px 0px 4px 0px;
 width: 1100px;
 margin-bottom: 10px;
-
 }
+
 div.top-menu-bar {
 border-bottom: 1px solid #DDD;
 border-top: 1px solid #DDD;
@@ -35,16 +36,15 @@ height: 100px;
 position: relative;
 display: block;
 }
+
 ul {
-height: 30px;
-display: inline-block;
+list-style-type: none;
 float: left;
 margin-left: 10px;
 margin-top: 40px;
-
 }
+
 li {
-display: inline-block;
 vertical-align: top;
 padding: 0 1em 0 1em;
 }
@@ -78,45 +78,113 @@ margin-right: 10px;
 margin-top: 32px;
 }
 
+div.main-content {
+background-color: #DDD;
+}
+
+#sign-in {
+color: white !important;
+}
+
+
+
+#nav {
+	padding: 0 2px;
+	border-radius: 10px;  
+	list-style-type: none;
+	
+	display: inline-table;
+}
+	div.top-menu-bar ul:after {
+		content: ""; clear: both; display: block;
+	}
+
+div.top-menu-bar ul li {
+	float: left !important;
+}
+	div.top-menu-bar ul li:hover {
+		
+	}
+		div.top-menu-bar ul li:hover a {
+		
+		}
+                div.top-menu-bar ul li ul li:hover a {
+                       
+                       background-color: #f90000;
+                       color: white !important;
+                }
+	
+	div.top-menu-bar ul li a {
+		display: block; padding: 5px 5px;
+		text-decoration: none;
+	}
+
+div.top-menu-bar ul ul {
+     display: none;
+     list-style-type: none;
+}
+div.top-menu-bar ul li:hover > ul {
+     display: block;
+}
+#nest {
+display: block;
+}
+
+#nest.li {
+}
+
+
 
 </style>
 </head>
 <body>
-<div class="body">
-  <div class="header">
-    <a class="phone" href="cart.html">Shopping Cart</a>
-    <div class="phone"> &nbsp | &nbsp </div>
-    <a class="phone" href="phone.html">(888)-888-8888</a>
+     <div class="body">
+          <div class="header">
+               <a class="phone" href="cart.html">Shopping Cart</a>
+               <div class="phone"> &nbsp | &nbsp </div>
+               <a class="phone" href="phone.html">(888)-888-8888</a>
+          </div>
     
-    </div>
-<div class="top-menu-bar">
-<div class="home-icon">
-  <a href="index.html">
-  <img src="home-logo.png">
-  </a>
-</div>
+          <div class="top-menu-bar" id="nav-div">
+               <div class="home-icon">
+                    <a href="index.html"> <img src="home-logo.png"></a>
+               </div>
 
-<ul>
-<li class="has-children">
-  <a href="certifications.html">Certifications</a>
-  </li>
-<li>
-  <a href="about.html">About Us</a>
-  </li>
-<li>
-  <a href="discounts.html">Group Discounts</a>
-  </li>
-<li>
-  <a href="faq.html">FAQ</a>
-  </li>
-<li>
-  <a href="contact.html">Contact Us</a>
-  </li>
-</ul>
-<div class="sign-in">Sign In
-</div>
+               <ul id="nav">
+                    <li class="has-children">
+                         <a href="certifications.html"
+		              onmouseover="mopen('m1')" 
+                              onmouseout="mclosetime()">Certifications</a>
 
-</div>
+		         <ul id="nested" onmouseover="mcancelclosetime()" 
+                             onmouseout="mclosetime()">
+			      <li><a href="ACLS.html">ACLS</a></li>
+			      <li><a href="PALS.html">PALS</a></li>
+			      <li><a href="BLS.html">BLS</a></li>
+			      <li><a href="CPR.html">CPR</a></li>
+			 </ul>
+			   
+                    </li>
+		    
+                    <li><a href="about.html">About Us</a></li>
+		    
+                    <li><a href="discounts.html">Group Discounts</a></li>
+
+		    <li><a href="faq.html">FAQ</a></li>
+
+		    <li><a href="contact.html">Contact Us</a></li>
+		    
+	       </ul>
+
+	       <div class="sign-in">
+		    <a id="sign-in" href="log-in.html">Sign In</a>
+	       </div>
+
+          <div class="main-content">
+
+          </div>
+
+     </div>
 </div>
 </body>
 
